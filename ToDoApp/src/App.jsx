@@ -1,35 +1,67 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
+import { useState } from "react";
+import  Navbar  from '../src/components/Navbar';
+import  Footer from '../src/components/Footer';
+import Sidebar  from '../src/components/Sidebar';
+import  List  from './components/List';
+import tasksData from '../src/task.json'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  const [allTasks, setAllTasks] = useState(tasksData);
+  const [task, setTask] = useState("");
+  const [completed, setCompleted] = useState("");
+
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+
+  const newTask = {
+    task,
+    completed
+  }
+
+  setAllTasks([...allTasks, newTask ]);
+  setTask("");
+  setCompleted(false);
+
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="home-page">
+      <Navbar />
+      <Sidebar />
+      <main className="content">
+        <h1>Welcome!</h1>
+        <p>This is the home page of the to-do list maker.</p>
+        <form onSubmit={handleFormSubmit}>
+          <div>
+            <label>
+              Task:
+              <input
+                type="text"
+                value={task}
+                onChange={(e) => setTask(e.target.value)}
+                required
+              />
+            </label>
+          </div>
+          <div>
+            <label>
+              Completed:
+              <input
+                type="checkbox"
+                checked={completed}
+                onChange={(e) => setCompleted(e.target.checked)}
+              />
+            </label>
+          </div>
+          <button type="submit">Add Task</button>
+        </form>
+        <List tasks={allTasks} onDelete={handleDelete} />
+      </main>
+      <Footer />
+    </div>
+  );
+};
 }
 
-export default App
+export default App;
