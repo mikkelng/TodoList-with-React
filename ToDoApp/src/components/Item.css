@@ -1,9 +1,0 @@
-.item {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 8px;
- }
- .item p {
-  color: #888;
-  text-decoration: line-through;
- }

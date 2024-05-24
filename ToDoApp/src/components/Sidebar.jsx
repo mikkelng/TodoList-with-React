@@ -1,5 +1,6 @@
 
 // import { Route, Routes } from 'react-router-dom'; 
+import '../components/Sidebar.css'
 
 const Sidebar = () => {
   return (

@@ -1,8 +1,11 @@
 import { useState } from "react";
 
-const Form = ({addTodo}) => {
-    const [value, setValue] = useState("")
-
+// eslint-disable-next-line react/prop-types
+const Form = ({todoList,addTodo}) => {
+    const [value, setValue] = useState(todoList)
+    console.log(value);
+    console.log(todoList);
+    
     const handleTaskInput = (e) => setValue(e.target.value)
     const handleFormSubmit = (e) => {
         e.preventDefault();
