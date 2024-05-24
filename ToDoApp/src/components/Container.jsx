@@ -22,6 +22,10 @@ export const Container = () => {
       
     );
   }
+
+    const deleteTodo = id =>{
+        setTodos(todos.filter(todo => todo.id !== id))
+    }
     return (
       <div className="Container">
         <h1>To-do list</h1>
@@ -31,6 +35,7 @@ export const Container = () => {
             task={todo}
             key={index}
              toggleComplete={toggleComplete}
+             deleteTodo={deleteTodo}
 
           />
         ))}
