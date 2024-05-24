@@ -16,13 +16,12 @@ export const Container = () => {
     ]);
     console.log(todos);
   };
-//   const toggleComplete = (id) => {
-//     setTodos(
-//       todos.map((todo) =>
-//         todo.id === id ? { ...todo, completed: !todo.completed } : todo
-//       )
-//     );
-
+  const toggleComplete = id => {
+    setTodos(todos.map(todo => todo.id === id ? 
+    {...todo, completed: !todo.completed} : todo)
+      
+    );
+  }
     return (
       <div className="Container">
         <h1>To-do list</h1>
@@ -31,7 +30,7 @@ export const Container = () => {
           <List
             task={todo}
             key={index}
-            // toggleComplete={toggleComplete}
+             toggleComplete={toggleComplete}
 
           />
         ))}
