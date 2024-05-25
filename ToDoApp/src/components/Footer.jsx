@@ -4,8 +4,9 @@ import '../components/Footer.css'
 const Footer = () => {
   return (
     <footer className="footer">
-      <p>&copy;To Do List</p>
+
       <a href="https://github.com/mikkelng/ReactApp">GitHub Repository</a>
+      <p>By Michael Nguyen</p>
     </footer>
   );
 };

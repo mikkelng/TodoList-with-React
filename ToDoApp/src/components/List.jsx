@@ -1,7 +1,9 @@
+/* eslint-disable react/prop-types */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPenToSquare } from '@fortawesome/free-solid-svg-icons'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
+// eslint-disable-next-line react/prop-types
 const List = ({task, toggleComplete, deleteTodo, editTodo}) => {
     console.log(task.id);
     return(

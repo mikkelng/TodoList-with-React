@@ -1,21 +1,33 @@
+// import { Route, Routes } from 'react-router-dom';
+import "../components/Sidebar.css";
+import { NavLink } from "react-router-dom";
 
-// import { Route, Routes } from 'react-router-dom'; 
-import '../components/Sidebar.css'
+const Sidebar = () => (
+  <sidebar className="sidebar">
+    <ul>
+      <li>
+      <button className="sidebar-btn">
+        <NavLink
+          to="/"
+          className={({ isActive }) => (isActive ? "active-link" : "")}
+        >
+          HOME
+        </NavLink>
+        </button>
+      </li>
 
-const Sidebar = () => {
-  return (
-    // <aside className="sidebar">
-    
-    //   <ul>
-    //   <Routes/>
-    //     <li><Route to="/">Home</Route></li>
-    //     <li><Route to="/about">About</Route></li>
-    //     <Routes/> 
-    //   </ul>
-  
-    // </aside>
-    0
-  );
-};
+      <li>
+         <button className="sidebar-btn">
+        <NavLink
+          to="/about"
+          className={({ isActive }) => (isActive ? "active-link" : "")}
+        >
+          ABOUT
+        </NavLink>
+        </button>
+      </li>
+    </ul>
+  </sidebar>
+);
 
 export default Sidebar;

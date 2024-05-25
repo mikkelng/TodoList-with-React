@@ -16,18 +16,17 @@ body {
     rgb(102, 141, 255),
     rgba(255, 216, 102)
   );
-  display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
 
 .Container {
+  position: relative;
   background: #668dff;
   width: 600px;
-  margin-top: 5rem;
-  padding: 2rem;
+  margin: 35px auto;
+  padding: 32px;
   border-radius: 20px;
   color: #fff;
 }
@@ -88,10 +87,11 @@ body {
 }
 
 .fa-trash {
-  margin-left: 0.75rem;
+  margin-left: 14px;
 }
 
 .edit-icon,
 .delete-icon {
   cursor: pointer;
 }
+

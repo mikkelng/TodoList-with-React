@@ -1,6 +1,12 @@
 .sidebar {
-    background-color: #f4f4f4;
+    background-color: #8e8e8e;
     padding: 20px;
+    display: flex;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    height: 100%;
+    align-items: center;
   }
   
   .sidebar ul {
@@ -8,10 +14,23 @@
   }
   
   .sidebar ul li {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   
   .sidebar ul li a {
     text-decoration: none;
-    color: #333;
+    color: #668dff;
   }
+
+  .active-link {
+    color: red;
+  }
+
+  .sidebar-btn {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: #fff;
+    
+  }
+ 
