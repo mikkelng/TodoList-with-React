@@ -1,12 +1,13 @@
 .sidebar {
-    background-color: #8e8e8e;
+    background-color: rgba(142, 142, 142, 0.7);
     padding: 20px;
     display: flex;
     position: absolute;
-    top: 10%;
+    height: 250px;
+    top: 167px;
     left: 0;
-    height: 100%;
     align-items: center;
+    border-radius: 0 20px 20px 0;
   }
   
   .sidebar ul {
@@ -14,23 +15,23 @@
   }
   
   .sidebar ul li {
-    margin-bottom: 20px;
+    margin: 20px 0;
   }
   
   .sidebar ul li a {
     text-decoration: none;
     color: #668dff;
+    font-weight: bold;
   }
 
-  .active-link {
+  /* .active-link {
     color: red;
-  }
+  } */
 
   .sidebar-btn {
     padding: 10px 20px;
     border-radius: 20px;
-    border: none;
+    border: 1px solid #668dff;
     background-color: #fff;
-    
   }
  
